@@ -31,7 +31,10 @@
         </p></button>
     </div>
     <div class="grid-item valign-wrapper">
-      <viz></viz>
+      
+      <!-- the viz -->
+      <viz ref="vizRef"></viz>
+
     </div>
     <div class="grid-item valign-wrapper">
       <button class="btn btn-legend waves-effect" @click="sizeLegend">
@@ -83,7 +86,8 @@ export default {
       console.log("colour legend");
     },
     sizeLegend: function() {
-      console.log("size legend");
+      // viz.$refs.resizeNodes("id");
+      this.$refs.vizRef.resizeNodes("workers")
     }
   }
   // lifecycle hooks: {},
